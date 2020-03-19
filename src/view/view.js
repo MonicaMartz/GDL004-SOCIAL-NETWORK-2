@@ -3,7 +3,7 @@ import SignIn from "./pages/signin.js";
 
 const components = {
     home: Home,
-    signIn: SignIn
+    signin: SignIn
 }
 
 export { components };
