@@ -11,8 +11,13 @@ const changeView = (hash) => {
         case "#/home":
             sectionMain.appendChild(components.home());
             break;
+
+            case "#/signup": 
+            sectionMain.appendChild(components.signup());
+            break; 
+
         case "#/signin": 
-        sectionPages.appendChild(components.signin());
+            sectionMain.appendChild(components.signin());
             break;   
         default:
             
