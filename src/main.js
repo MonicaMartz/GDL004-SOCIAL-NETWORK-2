@@ -1,16 +1,17 @@
-import { changeView } from "./controler/controler.js";
+import { controler } from "./controler/controler.js";
 
-const init = () =>{
-        changeView(window.location.hash)
-        window.addEventListener("hashchange", () => changeView(window.location.hash));
+const init = () => {
+        controler.changeView(window.location.hash)
+        window.addEventListener("hashchange", () => controler.changeView(window.location.hash));
 }
+
 
 window.addEventListener("load", init);
 /*el load es un evento que se dispara cuando un recurso
 y sus recursos  dependientes han terminado de cargar*/
 
 
-// Configuración de firebase
+//Configuración de firebase
 var firebaseConfig = {
         apiKey: "AIzaSyCMSU1YmFf97sfsOJgTkF9DvSC18sVoYQQ",
         authDomain: "redsocial-ecb03.firebaseapp.com",

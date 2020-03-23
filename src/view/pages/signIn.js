@@ -4,7 +4,7 @@ export default () => {
     <h1>RED SOCIAL</h1>
     <h2>Sign In</h2>
    
-   <form id="signIn">
+   <form class= "signInForm" id="signInForm">
    
    <label for="email-signin">Email:</label>
    <input name="userEmail" type="email" id="email-signin" placeholder="Ingresa tu E-mail"/>
@@ -14,11 +14,10 @@ export default () => {
 
 
   <button id="getInfo">Sign In</button>
-   `;
+  </form> `
 
    const divSingIn = document.createElement("div");
     divSingIn.innerHTML = signIn;
 
     return divSingIn;
-
-};
+}

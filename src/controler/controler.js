@@ -1,19 +1,27 @@
-import { components } from "../view/view.js";
+import { components, userView } from "../view/view.js";
 
+export const controler = {
 
-const changeView = (hash) => {
+    initControlerSignUp: () => {
+        userView.initSignUp()
+    }, 
 
-    const sectionMain = document.getElementById("sectionPages");
-    sectionMain.innerHTML = " ";
+   changeView: (hash) => {
+    console.log(hash)
+
+    const sectionMain = document.getElementById("container");
+    sectionMain.innerHTML =" ";
 
     switch (hash) {
+        case " ":
         case "#/":
         case "#/home":
             sectionMain.appendChild(components.home());
             break;
-
+            
             case "#/signup": 
             sectionMain.appendChild(components.signup());
+            controler.initControlerSignUp()
             break; 
 
         case "#/signin": 
@@ -21,10 +29,7 @@ const changeView = (hash) => {
             break;   
         default:
             
-
     }
-console.log(hash)
 
 }
-//
-export { changeView };
+};
