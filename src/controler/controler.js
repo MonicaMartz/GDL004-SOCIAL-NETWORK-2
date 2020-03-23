@@ -1,3 +1,4 @@
+import { model } from "../model/model.js";
 import { components, userView } from "../view/view.js";
 
 export const controler = {
@@ -6,7 +7,11 @@ export const controler = {
         userView.initSignUp()
     }, 
 
-   changeView: (hash) => {
+    newUser:(newUserSignUp) => {
+        model.signUpUser(newUserSignUp);
+    },
+
+    changeView: (hash) => {
     console.log(hash)
 
     const sectionMain = document.getElementById("container");

@@ -6,14 +6,14 @@ export default () => {
    
    <form class= "signInForm" id="signInForm">
    
-   <label for="email-signin">Email:</label>
-   <input name="userEmail" type="email" id="email-signin" placeholder="Ingresa tu E-mail"/>
-  
-   <label for="password-signin">Contraseña:</label>
-   <input name="userPassword" type="password" id="password-signin" placeholder="Ingresa tu E-mail"/>
+        <label for="email-signin">Email:</label>
+        <input name="userEmail" type="email" id="email-signin" placeholder="Ingresa tu E-mail"/>
+        
+        <label for="password-signin">Contraseña:</label>
+        <input name="userPassword" type="password" id="password-signin" placeholder="Ingresa tu E-mail"/>
 
 
-  <button id="getInfo">Sign In</button>
+        <button id="getInfo">Sign In</button>
   </form> `
 
    const divSingIn = document.createElement("div");
