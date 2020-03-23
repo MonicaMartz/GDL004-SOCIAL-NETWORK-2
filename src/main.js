@@ -12,7 +12,7 @@ y sus recursos  dependientes han terminado de cargar*/
 
 
 //Configuración de firebase
-var firebaseConfig = {
+let firebaseConfig = {
         apiKey: "AIzaSyCMSU1YmFf97sfsOJgTkF9DvSC18sVoYQQ",
         authDomain: "redsocial-ecb03.firebaseapp.com",
         databaseURL: "https://redsocial-ecb03.firebaseio.com",
