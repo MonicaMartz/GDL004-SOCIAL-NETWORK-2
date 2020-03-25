@@ -37,7 +37,10 @@ export const controler = {
         case "#/signin": 
             sectionMain.appendChild(components.signin());
             userView.initSignIn()
-            break;   
+            break;  
+        case "#/profile":
+            
+            break;
         default:
             
     }

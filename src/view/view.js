@@ -27,7 +27,14 @@ const userView = {
             console.log(newUserSignUp);
             userNewData.reset();//reset reestablece los valores del formulario
             //controler.newUser(newUserSignUp);
-            model.signUpUser(newUserSignUp);
+            model.signUpUser(newUserSignUp)
+            .catch(function(error) {
+                // Handle Errors here.
+                let errorCode = error.code;
+                let errorMessage = error.message;
+                // ...
+                alert(errorMessage);
+              });;
         })
     },
 
@@ -43,7 +50,15 @@ const userView = {
             }
             console.log(newUserSignIn);
             //userSignI.reset();//reset reestablece los valores del formulario
-            
+            model.signInUser(newUserSignIn)
+            .catch(function(error) {
+                // Handle Errors here.
+                let errorCode = error.code;
+                let errorMessage = error.message;
+             
+                alert(errorMessage);
+              });
+              
         })
     },
 

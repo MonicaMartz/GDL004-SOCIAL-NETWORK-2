@@ -3,6 +3,16 @@ import { controler } from "./controler/controler.js";
 const init = () => {
         controler.changeView(window.location.hash)
         window.addEventListener("hashchange", () => controler.changeView(window.location.hash));
+        firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                  //redireccion a la pagina solicitada
+                  
+                  // ...
+                } else {
+                   
+                  // redireccion a login
+                }
+              });
 }
 
 
