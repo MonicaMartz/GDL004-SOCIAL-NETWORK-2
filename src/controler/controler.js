@@ -6,10 +6,15 @@ export const controler = {
     initControlerSignUp: () => {
         userView.initSignUp()
     }, 
-
+    /*
     newUser:(newUserSignUp) => {
         model.signUpUser(newUserSignUp);
     },
+*/
+    initControlerSignIn: () => {
+        userView.initSignIn()
+    },
+    
 
     changeView: (hash) => {
     console.log(hash)
@@ -18,7 +23,7 @@ export const controler = {
     sectionMain.innerHTML =" ";
 
     switch (hash) {
-        case " ":
+        case "":
         case "#/":
         case "#/home":
             sectionMain.appendChild(components.home());
@@ -31,6 +36,7 @@ export const controler = {
 
         case "#/signin": 
             sectionMain.appendChild(components.signin());
+            userView.initSignIn()
             break;   
         default:
             

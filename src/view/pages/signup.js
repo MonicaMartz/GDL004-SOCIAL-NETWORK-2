@@ -18,7 +18,7 @@ export default () => {
 
         <button type="submit" id="getSignUp">Sign Up</button>
 
-        </form> `
+    </form> `
    
 
    const divSingUp = document.createElement("div");
