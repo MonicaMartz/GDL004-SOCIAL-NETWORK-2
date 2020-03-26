@@ -1,8 +1,8 @@
-import { model } from "../model/model.js";
 import { components, userView } from "../view/view.js";
+//import { model } from "../model/model.js";
 
 export const controler = {
-
+/*
     initControlerSignUp: () => {
         userView.initSignUp()
     }, 
@@ -11,10 +11,13 @@ export const controler = {
         model.signUpUser(newUserSignUp);
     },
 */
-    initControlerSignIn: () => {
+    /*initControlerSignIn: () => {
         userView.initSignIn()
-    },
+    },*/
     
+    initControlerProfile: () => {
+        userView.initiProfile()
+    },
 
     changeView: (hash) => {
     console.log(hash)
@@ -31,7 +34,7 @@ export const controler = {
             
             case "#/signup": 
             sectionMain.appendChild(components.signup());
-            controler.initControlerSignUp()
+            userView.initSignUp()
             break; 
 
         case "#/signin": 
@@ -39,6 +42,8 @@ export const controler = {
             userView.initSignIn()
             break;  
         case "#/profile":
+            sectionMain.appendChild(components.profile());
+            userView.initProfile()
             
             break;
         default:

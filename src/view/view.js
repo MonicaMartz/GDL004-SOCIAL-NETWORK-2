@@ -1,13 +1,16 @@
 import Home from "./pages/home.js";
 import SignUp from "./pages/signup.js";
 import SignIn from "./pages/signin.js";
+import Profile from "./pages/profile.js";
 import { model } from "../model/model.js";
+
 //import { controler }from "../controler/controler.js";
 
 const components = {
     home: Home,
     signup: SignUp,
-    signin: SignIn
+    signin: SignIn,
+    profile: Profile
 }
 
 const userView = {
@@ -31,8 +34,9 @@ const userView = {
             .catch(function(error) {
                 // Handle Errors here.
                 let errorCode = error.code;
-                let errorMessage = error.message;
-                // ...
+                //let errorMessage = error.message;
+                let errorMessage = "Verifica tus datos";
+                
                 alert(errorMessage);
               });;
         })
@@ -49,12 +53,14 @@ const userView = {
               pass: userSignIn.passwordSignIn.value
             }
             console.log(newUserSignIn);
+            userSignIn.reset();
             //userSignI.reset();//reset reestablece los valores del formulario
             model.signInUser(newUserSignIn)
             .catch(function(error) {
                 // Handle Errors here.
                 let errorCode = error.code;
-                let errorMessage = error.message;
+                let errorMessage = "Verifica tus datos";
+                //let errorMessage = error.message;
              
                 alert(errorMessage);
               });
@@ -62,6 +68,13 @@ const userView = {
         })
     },
 
+    initProfile: () => {
+      const userProfile = document.getElementById("profileForm");
+      console.log(userProfile);
+
+      
+    }
+    
 
 }
 

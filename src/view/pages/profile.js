@@ -1,0 +1,40 @@
+export default () => {
+
+const profileUser = `
+    <h1>Red social</h1>
+
+    <header>
+            <nav>
+                <ul>
+                    <li>
+                        <p>Nombre de usuario<p>
+                    </li>
+                    <li>
+                        <p> Red social</p>
+                    </li>
+                    <li>
+                        <button type="submit" id="closeSesion">Cerrar Sesión</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <form class= "profileForm" id="profileForm">
+   
+        <label for="toPost">Publica</label>
+        <input name="post" type="text" id="post" placeholder="Que nos quieres compartir"/>
+    
+
+        <button type="submit" id="send">Enviar</button>
+        <button type="submit" id="edit">Editar</button>
+        <button type="submit" id="delete">Eliminar</button>
+        
+  </form> `
+
+
+    const divProfile = document.createElement("div");
+    divProfile.innerHTML = profileUser;
+
+    return divProfile;
+}

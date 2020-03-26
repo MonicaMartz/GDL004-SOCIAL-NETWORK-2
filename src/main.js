@@ -7,8 +7,10 @@ const init = () => {
                 if (user) {
                   //redireccion a la pagina solicitada
                   
+                  
                   // ...
                 } else {
+
                    
                   // redireccion a login
                 }
