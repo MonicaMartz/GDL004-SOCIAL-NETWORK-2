@@ -1,24 +1,58 @@
 import { components, userView } from "../view/view.js";
-//import { model } from "../model/model.js";
+import { model } from "../model/model.js";
 
 export const controler = {
-/*
+    /*
     initControlerSignUp: () => {
         userView.initSignUp()
-    }, 
-    /*
+    }, */
     newUser:(newUserSignUp) => {
-        model.signUpUser(newUserSignUp);
+        model.signUpUser(newUserSignUp)
+        /*.then(function(response) {
+            console.log(response);
+
+        window.location.hash="#/profile";
+        controler.changeView(window.location.hash);
+        
+        })*/
+        /*.catch(function(error) {
+                let errorCode = error.code;
+                let errorMessage = error.message;
+                //let errorMessage = "Verifica tus datos";
+                
+                alert(errorMessage);
+
+                
+              });*/
     },
-*/
+    accesUser:(newUserSignIn) => {
+       return  model.signInUser(newUserSignIn)
+        .then(function(response){
+            console.log(response);
+
+        window.location.hash="#/profile";
+        controler.changeView(window.location.hash);
+        
+        })
+        .catch(function(error) {
+                let errorCode = error.code;
+                let errorMessage = error.message;
+                //let errorMessage = "Verifica tus datos";
+                
+                alert(errorMessage);
+
+
+        })
+    },
+   
     /*initControlerSignIn: () => {
         userView.initSignIn()
     },*/
-    
+    /*
     initControlerProfile: () => {
         userView.initiProfile()
     },
-
+*/
     changeView: (hash) => {
     console.log(hash)
 
@@ -37,11 +71,12 @@ export const controler = {
             userView.initSignUp()
             break; 
 
-        case "#/signin": 
+            case "#/signin": 
             sectionMain.appendChild(components.signin());
             userView.initSignIn()
             break;  
-        case "#/profile":
+            
+            case "#/profile":
             sectionMain.appendChild(components.profile());
             userView.initProfile()
             

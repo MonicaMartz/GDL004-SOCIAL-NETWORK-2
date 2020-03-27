@@ -3,18 +3,24 @@ import { controler } from "./controler/controler.js";
 const init = () => {
         controler.changeView(window.location.hash)
         window.addEventListener("hashchange", () => controler.changeView(window.location.hash));
-        firebase.auth().onAuthStateChanged(function(user) {
-                if (user) {
-                  //redireccion a la pagina solicitada
-                  
-                  
-                  // ...
-                } else {
+        /*firebase.auth().onAuthStateChanged(function(user)
+         {
+          console.log(user);
 
-                   
-                  // redireccion a login
+                if (user) {
+                  /*var displayName = user.displayName;
+                  var email = user.email;
+                  var uid = user.uid;
+                  var providerData = user.providerData*/
+                  //redireccion a la pagina solicitada
+                 /* window.location.hash = "#/profile";
+                  controler.changeView(window.location.hash);
+                
+                } else {
+                  controler.changeView(window.location.hash)
+                
                 }
-              });
+              });*/
 }
 
 

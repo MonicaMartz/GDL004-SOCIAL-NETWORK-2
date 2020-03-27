@@ -3,8 +3,7 @@ import SignUp from "./pages/signup.js";
 import SignIn from "./pages/signin.js";
 import Profile from "./pages/profile.js";
 import { model } from "../model/model.js";
-
-//import { controler }from "../controler/controler.js";
+import { controler }from "../controler/controler.js";
 
 const components = {
     home: Home,
@@ -21,25 +20,25 @@ const userView = {
         console.log(userNewData);
 
         userNewData.addEventListener("submit", (e) => {
-            e.preventDefault(); //evita que se elecute el submit
+            e.preventDefault(); 
             const newUserSignUp = {
               name: userNewData.nameSignUp.value,
               email: userNewData.emailSignUp.value,
               pass: userNewData.passwordSignUp.value
             }
             console.log(newUserSignUp);
-            userNewData.reset();//reset reestablece los valores del formulario
-            //controler.newUser(newUserSignUp);
-            model.signUpUser(newUserSignUp)
+            userNewData.reset();
+            
+            controler.newUser(newUserSignUp)
             .catch(function(error) {
-                // Handle Errors here.
-                let errorCode = error.code;
-                //let errorMessage = error.message;
-                let errorMessage = "Verifica tus datos";
-                
-                alert(errorMessage);
-              });;
-        })
+              let errorCode = error.code;
+              let errorMessage = error.message;
+                      
+              alert(errorMessage);
+            });
+                     
+          })
+          
     },
 
     initSignIn: () => {
@@ -47,24 +46,22 @@ const userView = {
         console.log(userSignIn);
 
         userSignIn.addEventListener("submit", (e) => {
-            e.preventDefault(); //evita que se elecute el submit
+            e.preventDefault(); 
             const newUserSignIn = {
               email: userSignIn.emailSignIn.value,
               pass: userSignIn.passwordSignIn.value
             }
             console.log(newUserSignIn);
             userSignIn.reset();
-            //userSignI.reset();//reset reestablece los valores del formulario
-            model.signInUser(newUserSignIn)
-            .catch(function(error) {
-                // Handle Errors here.
+            controler.accesUser(newUserSignIn)
+            /*.catch(function(error) {
                 let errorCode = error.code;
-                let errorMessage = "Verifica tus datos";
-                //let errorMessage = error.message;
-             
+                let errorMessage = error.message;
+                //let errorMessage = "Verifica tus datos";
+                            
                 alert(errorMessage);
               });
-              
+          */
         })
     },
 
