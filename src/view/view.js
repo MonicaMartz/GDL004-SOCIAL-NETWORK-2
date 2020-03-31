@@ -54,14 +54,14 @@ const userView = {
             console.log(newUserSignIn);
             userSignIn.reset();
             controler.accesUser(newUserSignIn)
-            /*.catch(function(error) {
+            .catch(function(error) {
                 let errorCode = error.code;
                 let errorMessage = error.message;
                 //let errorMessage = "Verifica tus datos";
                             
                 alert(errorMessage);
               });
-          */
+          
         })
     },
 
@@ -69,7 +69,16 @@ const userView = {
       const userProfile = document.getElementById("profileForm");
       console.log(userProfile);
 
-      
+      userProfile.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userPost = {
+          text: userProfile.post.value,
+        }
+        const db = firebase.firestore()
+        db.collection('posts').add(userPost)
+        userProfile.reset();
+        });
+        
     }
     
 

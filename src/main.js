@@ -1,35 +1,6 @@
 import { controler } from "./controler/controler.js";
 
 const init = () => {
-        controler.changeView(window.location.hash)
-        window.addEventListener("hashchange", () => controler.changeView(window.location.hash));
-        /*firebase.auth().onAuthStateChanged(function(user)
-         {
-          console.log(user);
-
-                if (user) {
-                  /*var displayName = user.displayName;
-                  var email = user.email;
-                  var uid = user.uid;
-                  var providerData = user.providerData*/
-                  //redireccion a la pagina solicitada
-                 /* window.location.hash = "#/profile";
-                  controler.changeView(window.location.hash);
-                
-                } else {
-                  controler.changeView(window.location.hash)
-                
-                }
-              });*/
-}
-
-
-window.addEventListener("load", init);
-/*el load es un evento que se dispara cuando un recurso
-y sus recursos  dependientes han terminado de cargar*/
-
-
-//Configuración de firebase
 let firebaseConfig = {
         apiKey: "AIzaSyCMSU1YmFf97sfsOJgTkF9DvSC18sVoYQQ",
         authDomain: "redsocial-ecb03.firebaseapp.com",
@@ -42,4 +13,33 @@ let firebaseConfig = {
 
 // inicialización de firebase
 firebase.initializeApp(firebaseConfig);
-     
+        controler.changeView(window.location.hash)
+        window.addEventListener("hashchange", () => controler.changeView(window.location.hash));
+        
+}
+
+
+window.addEventListener("load", init);
+/*el load es un evento que se dispara cuando un recurso
+y sus recursos  dependientes han terminado de cargar*/
+
+
+//Configuración de firebase
+
+/*
+
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
+
+
+// Initialize Cloud Firestore through Firebase
+/*firebase.initializeApp({
+  apiKey: '### FIREBASE API KEY ###',
+  authDomain: '### FIREBASE AUTH DOMAIN ###',
+  projectId: '### CLOUD FIRESTORE PROJECT ID ###'
+});*/
+
+
+
+      

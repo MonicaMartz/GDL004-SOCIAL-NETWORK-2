@@ -27,8 +27,7 @@ const profileUser = `
     
 
         <button type="submit" id="send">Enviar</button>
-        <button type="submit" id="edit">Editar</button>
-        <button type="submit" id="delete">Eliminar</button>
+        
         
   </form> `
 

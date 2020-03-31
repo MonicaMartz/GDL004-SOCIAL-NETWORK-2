@@ -2,28 +2,10 @@ import { components, userView } from "../view/view.js";
 import { model } from "../model/model.js";
 
 export const controler = {
-    /*
-    initControlerSignUp: () => {
-        userView.initSignUp()
-    }, */
+    
     newUser:(newUserSignUp) => {
         model.signUpUser(newUserSignUp)
-        /*.then(function(response) {
-            console.log(response);
-
-        window.location.hash="#/profile";
-        controler.changeView(window.location.hash);
         
-        })*/
-        /*.catch(function(error) {
-                let errorCode = error.code;
-                let errorMessage = error.message;
-                //let errorMessage = "Verifica tus datos";
-                
-                alert(errorMessage);
-
-                
-              });*/
     },
     accesUser:(newUserSignIn) => {
        return  model.signInUser(newUserSignIn)
@@ -34,7 +16,7 @@ export const controler = {
         controler.changeView(window.location.hash);
         
         })
-        .catch(function(error) {
+        /*.catch(function(error) {
                 let errorCode = error.code;
                 let errorMessage = error.message;
                 //let errorMessage = "Verifica tus datos";
@@ -42,17 +24,10 @@ export const controler = {
                 alert(errorMessage);
 
 
-        })
+        })*///Lo envíe a vista
     },
    
-    /*initControlerSignIn: () => {
-        userView.initSignIn()
-    },*/
-    /*
-    initControlerProfile: () => {
-        userView.initiProfile()
-    },
-*/
+    
     changeView: (hash) => {
     console.log(hash)
 
