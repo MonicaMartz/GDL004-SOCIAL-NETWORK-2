@@ -73,14 +73,40 @@ const userView = {
         e.preventDefault();
         const userPost = {
           text: userProfile.post.value,
+          
         }
+        console.log(userPost);
+
+
+        /*const db = firebase.firestore()
+        db.collection('posts').add(userPost)
+        */userProfile.reset();
+        controler.newPost(userPost);
+        });
+        
+    }
+    
+/*
+    initProfile: () => {
+      const userProfile = document.getElementById("profileForm");
+      console.log(userProfile);
+
+      userProfile.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userPost = {
+          text: userProfile.post.value,
+          
+        }
+        console.log(userPost);
         const db = firebase.firestore()
         db.collection('posts').add(userPost)
         userProfile.reset();
         });
         
-    }
-    
+    }*/
+
+
+
 
 }
 

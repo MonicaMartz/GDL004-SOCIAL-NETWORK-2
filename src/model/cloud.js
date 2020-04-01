@@ -1,6 +1,19 @@
+export const cloud ={
 
-// Get a reference to the database service
-//var database = firebase.database();
+  post:(userPost) => {
+
+    const db = firebase.firestore()
+    db.collection('posts').add(userPost)
+  }, 
+
+
+   
+  
+}
+
+
+
+
 
 
 

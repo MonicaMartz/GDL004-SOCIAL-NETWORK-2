@@ -1,5 +1,7 @@
 import { components, userView } from "../view/view.js";
 import { model } from "../model/model.js";
+import { cloud } from "../model/cloud.js";
+
 
 export const controler = {
     
@@ -27,6 +29,10 @@ export const controler = {
         })*///Lo envíe a vista
     },
    
+    newPost:(userPost) => {
+        cloud.post(userPost)
+    },
+
     
     changeView: (hash) => {
     console.log(hash)
