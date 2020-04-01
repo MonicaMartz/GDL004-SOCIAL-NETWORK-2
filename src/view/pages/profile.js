@@ -28,8 +28,20 @@ const profileUser = `
 
         <button type="submit" id="send">Enviar</button>
         
+    <table>
+   <tr> 
+    <th>POST</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+    </tr>
+    <tbody id="table">
+    </tbody>
 
-        
+    
+
+    </table>
+
+
         
   </form> `
 

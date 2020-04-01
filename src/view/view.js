@@ -84,8 +84,36 @@ const userView = {
         controler.newPost(userPost);
         });
         
-    }
+    },
     
+    readPost: () => {
+        const postRead = document.getElementById("table");
+        console.log(postRead);
+    
+
+          const db = firebase.firestore()
+          db.collection("posts").onSnapshot((querySnapshot) => {
+            postRead.innerHTML = "";
+            querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+            postRead.innerHTML += `
+            <tr>
+            <th>${doc.id}</th>
+            <td>${doc.data().text}</td>
+            </tr>
+            
+
+                `
+
+            });
+        });
+
+    }
+
+  
+
+
+
 /*
     initProfile: () => {
       const userProfile = document.getElementById("profileForm");

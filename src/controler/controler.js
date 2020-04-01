@@ -60,6 +60,7 @@ export const controler = {
             case "#/profile":
             sectionMain.appendChild(components.profile());
             userView.initProfile()
+            userView.readPost()
             
             break;
         default:
