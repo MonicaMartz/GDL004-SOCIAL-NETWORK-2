@@ -6,31 +6,30 @@ import { cloud } from "../model/cloud.js";
 export const controler = {
     
     newUser:(newUserSignUp) => {
-        model.signUpUser(newUserSignUp)
-        
+       return model.signUpUser(newUserSignUp)
     },
+
     accesUser:(newUserSignIn) => {
        return  model.signInUser(newUserSignIn)
         .then(function(response){
             console.log(response);
-
         window.location.hash="#/profile";
         controler.changeView(window.location.hash);
-        
         })
-        /*.catch(function(error) {
-                let errorCode = error.code;
-                let errorMessage = error.message;
-                //let errorMessage = "Verifica tus datos";
-                
-                alert(errorMessage);
+    },
 
+//prueba
+    /*controlerProfile: () => {
+       return model.profileUserNew()
+    },
+    */
 
-        })*///Lo envíe a vista
+    controlerSignOut: () => {
+        return model.signOutUser()
     },
    
     newPost:(userPost) => {
-        cloud.post(userPost)
+       return cloud.post(userPost)
     },
 
     
@@ -58,9 +57,13 @@ export const controler = {
             break;  
             
             case "#/profile":
-            sectionMain.appendChild(components.profile());
+            const view = components.profile();
+            sectionMain.appendChild(view);
             userView.initProfile()
             userView.readPost()
+            //userView. signOutButton()
+            //userView.eventPost()
+           
             
             break;
         default:

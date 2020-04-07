@@ -3,7 +3,7 @@ export const cloud ={
   post:(userPost) => {
 
     const db = firebase.firestore()
-    db.collection('posts').add(userPost)
+    return db.collection('posts').add(userPost)
   }, 
 
 

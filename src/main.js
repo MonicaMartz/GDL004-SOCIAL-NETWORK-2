@@ -15,6 +15,7 @@ let firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
         controler.changeView(window.location.hash)
         window.addEventListener("hashchange", () => controler.changeView(window.location.hash));
+        //controler.controlerProfile()
         
 }
 
@@ -22,23 +23,6 @@ firebase.initializeApp(firebaseConfig);
 window.addEventListener("load", init);
 /*el load es un evento que se dispara cuando un recurso
 y sus recursos  dependientes han terminado de cargar*/
-
-
-//Configuración de firebase
-
-/*
-
-const firebase = require("firebase");
-// Required for side-effects
-require("firebase/firestore");
-
-
-// Initialize Cloud Firestore through Firebase
-/*firebase.initializeApp({
-  apiKey: '### FIREBASE API KEY ###',
-  authDomain: '### FIREBASE AUTH DOMAIN ###',
-  projectId: '### CLOUD FIRESTORE PROJECT ID ###'
-});*/
 
 
 
