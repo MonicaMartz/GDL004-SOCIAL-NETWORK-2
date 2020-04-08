@@ -103,7 +103,7 @@ const userView = {
 //timestamp: firebase.firestore.FieldValue.serverTimestamp()
 
     initProfile: () => {
-      /*const userProfile = document.getElementById("profileForm");
+      const userProfile = document.getElementById("profileForm");
       console.log(userProfile);
 
       userProfile.addEventListener("submit", (e) => {
@@ -112,14 +112,20 @@ const userView = {
           text: userProfile.post.value,
         }
         userProfile.reset();
-        controler.newPost(userPost)
-        .catch(function(error) {
+
+        if(userPost.text != ""){
+          controler.newPost(userPost)
+        } else {
+          alert("rellena los campos")
+        }
+        
+       /* .catch(function(error) {
           //if (text.userPost = "") 
           //let errorCode = error.code;
           let errorMessage = error.message;      
           alert(errorMessage);
-        });
         });*/
+        });
         
     },
 // initProfile: () => {
@@ -189,19 +195,27 @@ const userView = {
 
         textPost.setAttribute("placeholder", "Comparte tus ideas");
 
+        //PRUEBA DE BOTON EDITAR
         const buttonEdit = document.createElement("button");
         buttonEdit.innerHTML ="Editar";
+        buttonEdit.dataset.notaID = doc.id
         buttonEdit.setAttribute("id", "editButton");
 
+        buttonEdit.addEventListener('click', (e) => {
+          console.log(e.target.dataset.notaID);
+        })
+
+        //PRUEBA DE BOTON ELIMINAR
         const buttonDelete = document.createElement("button");
         buttonDelete.innerHTML ="Eliminar";
         buttonDelete.dataset.notaID = doc.id
         buttonDelete.setAttribute("id", "deleteButton");
 
         buttonDelete.addEventListener('click', (e) => {
-          console.log(e.target.dataset.notaID);
+        controler.deletePost(doc.id)
+        console.log(e.target.dataset.notaID);
         })
-          
+
     containerPost.appendChild(textPost);
     containerPost.appendChild(buttonEdit);
     containerPost.appendChild(buttonDelete);

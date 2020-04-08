@@ -32,6 +32,11 @@ export const controler = {
        return cloud.post(userPost)
     },
 
+    deletePost:(id) => {
+        return cloud.delete(id)
+    },
+
+
     
     changeView: (hash) => {
     console.log(hash)
