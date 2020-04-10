@@ -63,7 +63,8 @@
 
 */
 
-export default () => {
+export default (user) => {
+    console.log(user);
 
 const profileUser = `
     <h1>Red social</h1>
@@ -71,7 +72,7 @@ const profileUser = `
             <nav>
                 <ul>
                     <li>
-                        <p>Nombre de usuario<p>
+                        <p>${user.email}<p>
                     </li>
                     <li>
                         <p> Red social</p>
@@ -92,7 +93,7 @@ const profileUser = `
 
     const divProfile = document.createElement("div");
     divProfile.innerHTML = profileUser;
-
+    
     return divProfile;
 }
 

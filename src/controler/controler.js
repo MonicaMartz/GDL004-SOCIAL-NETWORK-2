@@ -1,6 +1,7 @@
 import { components, userView } from "../view/view.js";
 import { model } from "../model/model.js";
 import { cloud } from "../model/cloud.js";
+import { userAuth } from "../model/auth.js";
 
 
 export const controler = {
@@ -20,7 +21,7 @@ export const controler = {
 
 //prueba
     /*controlerProfile: () => {
-       return model.profileUserNew()
+       return model.userAuth()
     },
     */
 
@@ -62,10 +63,20 @@ export const controler = {
             break;  
             
             case "#/profile":
-            const view = components.profile();
+            userAuth((user) => {
+                if(user) {
+                    const view = components.profile(user);
+                    sectionMain.appendChild(view);
+                    userView.initProfile()
+                    userView.readPost()
+                } else {
+                    sectionMain.appendChild(components.home());
+                }
+            })
+            /*const view = components.profile();
             sectionMain.appendChild(view);
             userView.initProfile()
-            userView.readPost()
+            userView.readPost()*/
             //userView. signOutButton()
             //userView.eventPost()
            

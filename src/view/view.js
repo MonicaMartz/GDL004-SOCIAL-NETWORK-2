@@ -20,6 +20,7 @@ const userView = {
     initSignUp: () => {
         const userNewData = document.getElementById("signUpForm");
         console.log(userNewData);
+        console.log(userNewData);
 
         userNewData.addEventListener("submit", (e) => {
             e.preventDefault(); 
@@ -116,7 +117,7 @@ const userView = {
         if(userPost.text != ""){
           controler.newPost(userPost)
         } else {
-          alert("rellena los campos")
+          alert("Rellena los campos")
         }
         
        /* .catch(function(error) {
