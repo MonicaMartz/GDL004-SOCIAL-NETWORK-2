@@ -19,12 +19,6 @@ export const controler = {
         })
     },
 
-//prueba
-    /*controlerProfile: () => {
-       return model.userAuth()
-    },
-    */
-
     controlerSignOut: () => {
         return model.signOutUser()
     },
@@ -69,6 +63,10 @@ export const controler = {
                     sectionMain.appendChild(view);
                     userView.initProfile()
                     userView.readPost()
+                    userView.signOut = () => {
+                        sectionMain.appendChild(components.home());
+                    }
+
                 } else {
                     sectionMain.appendChild(components.home());
                 }

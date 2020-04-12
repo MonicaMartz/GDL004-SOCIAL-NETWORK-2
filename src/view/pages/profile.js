@@ -1,15 +1,19 @@
-/*export default () => {
+/*export default (user) => {
+    console.log(user);
     
-    const barramenu = document.createElement('nav');
-    barramenu.setAttribute('class', 'header');
+    const barramenu = document.createElement("nav");
+    barramenu.setAttribute("class", "header");
     const socialnetwork =document.createElement("h1");
         socialnetwork.innerHTML="Social Network";
-    const nameUser = document.createElement("h2");
-        nameUser.innerHTML="Bienvenido";
+    const welcome = document.createElement("h2");
+        welcome.innerHTML="Bienvenido";
+    const nameUser =document.createElement("p")
+         nameUser.innerHTML= '${user.email}'
     const buttonExit = document.createElement("button");
         buttonExit.innerHTML ="Salir";
         buttonExit.setAttribute("id", "exitbutton");
         barramenu.appendChild(socialnetwork);
+        barramenu.appendChild(welcome);
         barramenu.appendChild(nameUser);
         barramenu.appendChild(buttonExit)
 
@@ -21,31 +25,11 @@
         title.setAttribute("id", "titlePost");
         title.innerHTML="Tus posts";
 
-    const textPost =document.createElement("textarea");
-        textPost.setAttribute("id", "textPost");
-        textPost.setAttribute("placeholder", "Comparte tus ideas");
-
-    //const buttonSend = document.createElement("button");
-        buttonSend.innerHTML ="Enviar";
-        buttonSend.setAttribute("id", "sendButton");
-
-
-    const buttonEdit = document.createElement("button");
-      buttonEdit.innerHTML ="Editar";
-      buttonEdit.setAttribute("id", "editButton");
-
-    const buttonDelete = document.createElement("button");
-    buttonDelete.innerHTML ="Eliminar";
-    buttonDelete.setAttribute("id", "deleteButton");
-
-   
-
+    const posttable = document.createElement("div") 
+    posttable.setAttribute("id", "table");
+     
     containerPost.appendChild(title);
-    containerPost.appendChild(textPost);
-    containerPost.appendChild(buttonSend);
-    containerPost.appendChild(buttonEdit);
-    containerPost.appendChild(buttonDelete);
-    containerPost.appendChild(tabla);
+    containerPost.appendChild(posttable);
 
     const profile = document.createElement("div");
     profile.setAttribute("class","profile");
@@ -57,11 +41,11 @@
     return profile;
 }
 
-
-
-    
-
 */
+
+
+
+
 
 export default (user) => {
     console.log(user);
@@ -88,6 +72,13 @@ const profileUser = `
         <input name="post" type="text" id="post" placeholder="Que nos quieres compartir"/>
         <button type="submit" id="send">Enviar</button>
         </form>
+
+        <div id="edittext">
+        <label for="editText">¿Cambiaste de idea?</label>
+        <input name="editText" type="text" id="edittx" placeholder="¿Qué modificaremos?"/>
+        <button id="send"> Cambios</button>
+        </div>
+
         <div id="table">
         </div>`
 

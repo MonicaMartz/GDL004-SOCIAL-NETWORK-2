@@ -1,20 +1,25 @@
 export const model ={
 
-  //NEW USER
+  //////////NEW USER /////FUNCTION FIREBASE
     signUpUser:(newUserSignUp) => {
 
         return firebase.auth().createUserWithEmailAndPassword(newUserSignUp.email,  newUserSignUp.pass)
 
     }, 
 
-    //LOGIN USER
+  //////////LOGIN USER  ////FUNCTION FIREBASE
     signInUser:(newUserSignIn) => {
 
        return firebase.auth().signInWithEmailAndPassword(newUserSignIn.email,  newUserSignIn.pass)
         
     }, 
-    
-    //INFO USER 
+  /////////SIGN OUT USER  /////FUNCTION FIREBASE
+    signOutUser: () => {
+      return firebase.auth().signOut()
+    },
+
+
+    //INFO USER
     //ACTIVE SESION
   //POSIBLES DATOS DE LOCAL STORAGE
 
@@ -25,13 +30,11 @@ export const model ={
   /*crear un boton evento on click que llame a la 
   cerrar sesión, así tal cual, y que envíe a la pagina
   de inicio */
-/*
-    signOutUser: () => {
-      return firebase.auth().signOut()
-    },
-*/
+
+    
+
     //obtiene la sesión activa
-    userAuth: () => {
+   /* userAuth: () => {
       return firebase.auth().currentUser;
     }
 

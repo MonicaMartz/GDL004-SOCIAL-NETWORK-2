@@ -1,5 +1,6 @@
 export const cloud ={
 
+  //FIREBASE FUNCTION. CREATE COLLECTION
   post:(userPost) => {
 
     const db = firebase.firestore()
@@ -13,10 +14,10 @@ export const cloud ={
     console.log("Document successfully deleted!");
 });
    },
-  /*
+  
    //////////
 //PRUEBAS PARA EDITAR/*
-  edit: (id) => {
+ /* editText: (id) => {
     const db = firebase.firestore()
     var editps = db.collection("posts").doc(id);
 
@@ -32,9 +33,7 @@ export const cloud ={
        console.error("Error updating document: ", error);
    });
    
-   }
-
-   */
+   }*/
 
 
 }
