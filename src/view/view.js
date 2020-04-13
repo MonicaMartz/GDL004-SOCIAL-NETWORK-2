@@ -113,15 +113,6 @@ const userView = {
         querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data().text}`);
 
-        //postRead.innerHTML + = 
-       /* const containeredit = document.createElement("div");
-        containeredit.setAttribute("id", "containeredit");
-
-        const textedit =document.createElement("textarea");
-        textedit.setAttribute("id", "textedit");
-        //textPost.value =  doc.data().text
-*/
-
       const containerPost = document.createElement("div");
         containerPost.setAttribute("id", "containerPost");
 
@@ -164,6 +155,7 @@ const userView = {
 
         buttonEdit.addEventListener('click', (e) => {
           console.log(e.target.dataset.notaID);
+          document.getElementById("edittx").value = `${doc.data().text}`
           editText(doc.id)
         })
 
@@ -171,17 +163,17 @@ const userView = {
 
         const userEdit = document.getElementById("edittx");
       //const postchange = document.getElementById("containerPost").value;
-      const bottonchange = document.getElementById("editButton");
-        bottonchange.innerHTML ="Enviar";
-        bottonchange.addEventListener('click', (e) => {
-          console.log(e.target.dataset.notaID);
+        const bottonchange = document.getElementById("cambios");
+          bottonchange.innerHTML ="Enviar";
+          bottonchange.addEventListener('click', (e) => {
 
-          const db = firebase.firestore()
-          const editps = db.collection("posts").doc(id);
-          
+        const db = firebase.firestore()
+        const editps = db.collection("posts").doc(id);
           return editps.update({
           text: userEdit.value
           })
+          
+          //userEdit.reset();
 
       .then(function() {
        console.log("Document successfully updated!");

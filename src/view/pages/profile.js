@@ -76,7 +76,7 @@ const profileUser = `
         <div id="edittext">
         <label for="editText">¿Cambiaste de idea?</label>
         <input name="editText" type="text" id="edittx" placeholder="¿Qué modificaremos?"/>
-        <button id="send"> Cambios</button>
+        <button id="cambios">Cambios</button>
         </div>
 
         <div id="table">
