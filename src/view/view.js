@@ -72,8 +72,9 @@ const userView = {
 
     ////////////Sign Out
 
-    signOut: () => {
-      const userSignOut = profileUser.querySelector('#closeSesion');
+     signOut: () => {
+      const userSignOut = document.getElementById('closeSesion');
+      //const userSignOut = profileUser.querySelector('#closeSesion');
       console.log(userSignOut);
       userSignOut.addEventListener('click', (e) => {
         model.signOutUser()
@@ -81,16 +82,22 @@ const userView = {
 
     },
 
+
+
     //////////Create post in real time REATE POST IN REAL TIME
     initProfile: () => {
       const userProfile = document.getElementById("profileForm");
-     
+      const user= firebase.auth().currentUser;
+      const tim = new Date();
+      const date = tim.getHours() +":" + (tim.getMinutes()+1) + " Fecha:" + tim.getDate() + "-" + (tim.getMonth()+1) +"-" + tim.getFullYear();
       console.log(userProfile);
 
       userProfile.addEventListener("submit", (e) => {
         e.preventDefault();
         const userPost = {
           text: userProfile.post.value,
+          email: user.email,
+          date: date,
         }
         userProfile.reset();
         if(userPost.text != ""){
@@ -119,6 +126,10 @@ const userView = {
       const textPost =document.createElement("textarea");
         textPost.setAttribute("id", "textPost");
         textPost.value =  doc.data().text
+
+      const datePost =document.createElement("textarea");
+        datePost.setAttribute("id", "date");
+        datePost.value =  doc.data().date
 
         //textPost.setAttribute("placeholder", "Comparte tus ideas");
 
@@ -163,17 +174,16 @@ const userView = {
 
         const userEdit = document.getElementById("edittx");
       //const postchange = document.getElementById("containerPost").value;
-        const bottonchange = document.getElementById("cambios");
+      const bottonchange = document.getElementById("cambios");
           bottonchange.innerHTML ="Enviar";
           bottonchange.addEventListener('click', (e) => {
+          console.log(e.target.dataset.notaID);
 
-        const db = firebase.firestore()
-        const editps = db.collection("posts").doc(id);
+          const db = firebase.firestore()
+          const editps = db.collection("posts").doc(id);
           return editps.update({
           text: userEdit.value
           })
-          
-          //userEdit.reset();
 
       .then(function() {
        console.log("Document successfully updated!");
@@ -189,6 +199,7 @@ const userView = {
 //////////////////////////////////////////////////////
        
            //containeredit.appendChild(textedit);
+    containerPost.appendChild(datePost);
     containerPost.appendChild(textPost);
     containerPost.appendChild(buttonEdit);
     containerPost.appendChild(buttonDelete);
