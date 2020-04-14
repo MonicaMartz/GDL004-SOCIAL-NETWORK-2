@@ -62,7 +62,7 @@ const profileUser = `
                         <p> Red social</p>
                     </li>
                     <li>
-                        <button id="closeSesion">Cerrar Sesión</button>
+                    <button id="closed">Cerrar Sesión</button>
                     </li>
                 </ul>
             </nav>

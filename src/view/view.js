@@ -72,11 +72,13 @@ const userView = {
 
     ////////////Sign Out
 
+
+
      signOut: () => {
-      const userSignOut = document.getElementById('closeSesion');
-      //const userSignOut = profileUser.querySelector('#closeSesion');
-      console.log(userSignOut);
-      userSignOut.addEventListener('click', (e) => {
+     const buttonSignOut = document.getElementById("closed");
+      //const userSignOut = profileUser.querySelector('closeSesion');
+      console.log(buttonSignOut);
+      buttonSignOut.addEventListener('click', (e) => {
         model.signOutUser()
       })
 

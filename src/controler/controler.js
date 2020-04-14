@@ -63,12 +63,14 @@ export const controler = {
                     sectionMain.appendChild(view);
                     userView.initProfile()
                     userView.readPost()
-                    userView.signOut = () => {
+                    userView.signOut ()/* => {
+                        console.log(signOut)
                         sectionMain.appendChild(components.home());
-                    }
+                    }*/
 
                 } else {
-                    sectionMain.appendChild(components.home());
+                   window.location.hash = "#/home"
+                   // sectionMain.appendChild(components.home());
                 }
             })
             /*const view = components.profile();
