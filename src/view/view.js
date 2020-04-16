@@ -249,30 +249,30 @@ const db = firebase.firestore()
     querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data().text}`);
 
-  const containerPost = document.createElement("div");
-    containerPost.setAttribute("id", "containerPost");
+  const containerPostGeneral = document.createElement("div");
+  containerPostGeneral.setAttribute("id", "containerPostGeneral");
 
-  const postUser = document.createElement("textarea");
-  postUser.setAttribute("id", "postUser");
-  postUser.value = doc.data().email
+  const postUserGeneral = document.createElement("textarea");
+  postUserGeneral.setAttribute("id", "postUserGeneral");
+  postUserGeneral.value = doc.data().email
 
-  const textPost =document.createElement("textarea");
-    textPost.setAttribute("id", "textPost");
-    textPost.value =  doc.data().text
+  const textPostGeneral =document.createElement("textarea");
+  textPostGeneral.setAttribute("id", "textPostGeneral");
+  textPostGeneral.value =  doc.data().text
 
-  const datePost =document.createElement("textarea");
-    datePost.setAttribute("id", "date");
-    datePost.value =  doc.data().date
+  const datePostGeneral =document.createElement("textarea");
+  datePostGeneral.setAttribute("id", "dateGeneral");
+  datePostGeneral.value =  doc.data().date
 
    
 
 //////////////////////////////////////////////////////
    
        //containeredit.appendChild(textedit);
-containerPost.appendChild(datePost);
-containerPost.appendChild(postUser);
-containerPost.appendChild(textPost);
-tableGeneral.appendChild(containerPost);
+       containerPostGeneral.appendChild(datePostGeneral);
+       containerPostGeneral.appendChild(postUserGeneral);
+       containerPostGeneral.appendChild(textPostGeneral);
+       tableGeneral.appendChild(containerPost);
 })
 })
 
