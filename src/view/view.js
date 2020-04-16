@@ -2,8 +2,10 @@ import Home from "./pages/home.js";
 import SignUp from "./pages/signup.js";
 import SignIn from "./pages/signin.js";
 import Profile from "./pages/profile.js";
+import General from "./pages/general.js"
 import { model } from "../model/model.js";
 import { controler }from "../controler/controler.js";
+import general from "./pages/general.js";
 
 
 //////////Creates in an object the elements of the view
@@ -11,7 +13,8 @@ const components = {
     home: Home,
     signup: SignUp,
     signin: SignIn,
-    profile: Profile
+    profile: Profile,
+    general: General
 }
 
 //////////Object whith methods
@@ -229,7 +232,61 @@ const userView = {
   })
  })
 
+},
+
+////////////////*******////////****/*/*/*/////// */ */
+
+readGeneral: () => {
+  const postGeneral = document.getElementById("tableGeneral");
+
+const db = firebase.firestore()
+  db.collection("posts").onSnapshot((querySnapshot) => {
+
+   /*const db = firebase.firestore()
+    db.collection("posts").where("email","==", user.email).onSnapshot((querySnapshot) => {
+  */
+    postGeneral.innerHTML = "";
+    querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data().text}`);
+
+  const containerPost = document.createElement("div");
+    containerPost.setAttribute("id", "containerPost");
+
+  const postUser = document.createElement("textarea");
+  postUser.setAttribute("id", "postUser");
+  postUser.value = doc.data().email
+
+  const textPost =document.createElement("textarea");
+    textPost.setAttribute("id", "textPost");
+    textPost.value =  doc.data().text
+
+  const datePost =document.createElement("textarea");
+    datePost.setAttribute("id", "date");
+    datePost.value =  doc.data().date
+
+   
+
+//////////////////////////////////////////////////////
+   
+       //containeredit.appendChild(textedit);
+containerPost.appendChild(datePost);
+containerPost.appendChild(postUser);
+containerPost.appendChild(textPost);
+tableGeneral.appendChild(containerPost);
+})
+})
+
 }
+
+
+
+
+
+
+
+
+
+
         
 }
 

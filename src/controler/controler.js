@@ -75,10 +75,11 @@ export const controler = {
             })
             break
 
-           /* case "#/general":                   
-                       userView.readGral()
+           case "#/general":  
+           sectionMain.appendChild(components.general());                 
+                      userView.readGeneral()
     
-                   */
+                   
 
 
             /*const view = components.profile();

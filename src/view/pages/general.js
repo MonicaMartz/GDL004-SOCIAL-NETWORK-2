@@ -7,14 +7,14 @@ const general = `
             <nav>
                 <ul>
                     <li>
-                        <p>${user.email}<p>
+                        <p><p>
                     </li>
                     <li>
                         <p> Red social</p>
                     </li>
                     <li>
                     <button id="closed">Cerrar Sesión</button>
-                    <button id="profile"><a href="#/perfil">Perfil</a></button>
+                    <button id="profile"><a href="#/profile">Perfil</a></button>
                     </li>
                 </ul>
             </nav>
