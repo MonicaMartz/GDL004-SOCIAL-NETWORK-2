@@ -64,7 +64,10 @@ const profileUser = `
                     <li>
                     <button id="closed">Cerrar Sesión</button>
                     </li>
-                </ul>
+                    <li>
+                    <button id="profile"><a href="#/general">General</a></button>
+                    </li>
+                    </ul>
             </nav>
         </header>
         <form class= "profileForm" id="profileForm">

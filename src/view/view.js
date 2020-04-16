@@ -68,14 +68,14 @@ const userView = {
               });
           
         })
-    },
+      },
 
     ////////////Sign Out
 
 
 
-     signOut: () => {
-     const buttonSignOut = document.getElementById("closed");
+    signOut: () => {
+      const buttonSignOut = document.getElementById("closed");
       //const userSignOut = profileUser.querySelector('closeSesion');
       console.log(buttonSignOut);
       buttonSignOut.addEventListener('click', (e) => {
@@ -97,33 +97,52 @@ const userView = {
       userProfile.addEventListener("submit", (e) => {
         e.preventDefault();
         const userPost = {
+
           text: userProfile.post.value,
           email: user.email,
           date: date,
         }
-        userProfile.reset();
-        if(userPost.text != ""){
-          controler.newPost(userPost)
-        } else {
-          alert("Rellena los campos")
-        }
-    
-        });
         
+        userProfile.reset();
+          if(userPost.text != ""){
+            controler.newPost(userPost)
+          } else {
+            alert("Rellena los campos")
+          }
+    
+          });
+        
+     },
+/*
+    getPost:(cb)=>{
+      return modelo.observerUser((user) => {
+        return firebase.firestore().collection("post").where( 'userId', '==', user.uid).onSnapshot(cb)
+      })
+      //console.log('****MODELO***********'+' '+user+' '+'**************************'); 
     },
+*/
 
-    readPost: () => {
+
+
+    readPost: (user) => {
       const postRead = document.getElementById("table");
   
-      const db = firebase.firestore()
-        db.collection("posts").onSnapshot((querySnapshot) => {
-       
+    /* const db = firebase.firestore()
+      db.collection("posts").onSnapshot((querySnapshot) => {*/
+
+       const db = firebase.firestore()
+        db.collection("posts").where("email","==", user.email).onSnapshot((querySnapshot) => {
+      
         postRead.innerHTML = "";
         querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data().text}`);
 
       const containerPost = document.createElement("div");
         containerPost.setAttribute("id", "containerPost");
+
+      const postUser = document.createElement("textarea");
+      postUser.setAttribute("id", "postUser");
+      postUser.value = doc.data().email
 
       const textPost =document.createElement("textarea");
         textPost.setAttribute("id", "textPost");
@@ -202,6 +221,7 @@ const userView = {
        
            //containeredit.appendChild(textedit);
     containerPost.appendChild(datePost);
+    containerPost.appendChild(postUser);
     containerPost.appendChild(textPost);
     containerPost.appendChild(buttonEdit);
     containerPost.appendChild(buttonDelete);

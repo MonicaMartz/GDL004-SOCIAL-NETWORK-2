@@ -62,7 +62,7 @@ export const controler = {
                     const view = components.profile(user);
                     sectionMain.appendChild(view);
                     userView.initProfile()
-                    userView.readPost()
+                    userView.readPost(user)
                     userView.signOut ()/* => {
                         console.log(signOut)
                         sectionMain.appendChild(components.home());
@@ -73,6 +73,14 @@ export const controler = {
                    // sectionMain.appendChild(components.home());
                 }
             })
+            break
+
+           /* case "#/general":                   
+                       userView.readGral()
+    
+                   */
+
+
             /*const view = components.profile();
             sectionMain.appendChild(view);
             userView.initProfile()
