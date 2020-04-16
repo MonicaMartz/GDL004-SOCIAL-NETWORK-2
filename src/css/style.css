@@ -1,3 +1,9 @@
+* {
+  margin:0;
+  padding: 0;
+
+  }
+
 
 .f-open {
     font-family: 'Open Sans', sans-serif;
@@ -8,40 +14,81 @@
   }
   
   .main-container {
-    height: 100vh;
-    background-color: palevioletred;
     width: 100vw;
-    background-size:cover;
-    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: rgb(123, 216, 150);
+    /*background-image: url("../images/fondo3.png");*/
     position: absolute;
-    z-index: 10;
-    filter: blur(2px);
+    background-size:auto;
   }
+    
   
   .content {
-    
-    margin: 0 auto;
-    position: relative;
-    z-index:1000;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 100px 1fr 100px;
-    justify-items: center;
-    max-width:1440px;
+    width: 50%;
+    border: 10px solid white;
+    margin: auto;
+    font-size: 50px;
+    line-height:  50px;
+    background-color: rgb(236, 145, 190);
+
   }
   
+  .logo {
+    background-color: rgb(206, 43, 124);
+    text-align: center;
+    font-size: 6vh ;
+
+  }
+
+  .slogan {
+    font-size: 4vh ;
+  }
+  .welcome {
+    background-color: rgb(89, 172, 7);
+    text-align: center;
+    font-size: 5vh;
+  }
+
+  .button-Sign {
+    width: 14vw;
+    height: 6vh;
+    background: #0caa39;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+    
+  }
+
+  .button-SignUp {
+    width: 14vw;
+    height: 6vh;
+    background: #0caa39;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+  }
+
+  .footer {
+    background-color: rgb(116, 223, 86);
+    position: absolute;
+    bottom: 0;
+
+  }
+
+
   
-  
+  /*
   .content .title {
-    align-self: flex-end;
+    /*align-self: flex-end;
     color: white;
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
     text-shadow: 2px 2px rgb(41, 41, 41);
-    padding: 8px;
-  }
+    padding: 8px;*/
+ /* }
   
   
   .content .sub-title {
