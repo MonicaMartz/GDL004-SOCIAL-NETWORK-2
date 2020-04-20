@@ -178,11 +178,11 @@ const userView = {
         buttonDelete.setAttribute("id", "deleteButton");
 
         buttonDelete.addEventListener('click', (e) => {
-        controler.deletePost(doc.id)
-        console.log(e.target.dataset.notaID);
+          controler.deletePost(doc.id)
+          console.log(e.target.dataset.notaID);
         })
-/////////////////////////////////////////////////////
-//PRUEBA DE BOTON EDITAR
+
+//////////Botón editar
       const buttonEdit = document.createElement("button");
         buttonEdit.innerHTML ="Editar";
         buttonEdit.dataset.notaID = doc.id
@@ -194,35 +194,30 @@ const userView = {
           editText(doc.id)
         })
 
-      function editText(id) {
+        function editText(id) {
 
-        const userEdit = document.getElementById("edittx");
-      //const postchange = document.getElementById("containerPost").value;
-      const bottonchange = document.getElementById("cambios");
-          bottonchange.innerHTML ="Enviar";
-          bottonchange.addEventListener('click', (e) => {
-          console.log(e.target.dataset.notaID);
+          const userEdit = document.getElementById("edittx");
+          const bottonchange = document.getElementById("cambios");
+            bottonchange.innerHTML ="Enviar";
+            bottonchange.addEventListener('click', (e) => {
+            console.log(e.target.dataset.notaID);
 
           const db = firebase.firestore()
           const editps = db.collection("posts").doc(id);
-          return editps.update({
-          text: userEdit.value
-          })
+            return editps.update({
+            text: userEdit.value
+            })
 
-      .then(function() {
-       console.log("Document successfully updated!");
-       })
-       .catch(function(error) {
-       // The document probably doesn't exist.
-       console.error("Error updating document: ", error);
-       });
-
-      });
+        .then(function() {
+          console.log("Document successfully updated!");
+           })
+        .catch(function(error) {
+          console.error("Error updating document: ", error);
+        });
+         });
       }
   
-//////////////////////////////////////////////////////
-       
-           //containeredit.appendChild(textedit);
+/// Contenedor de Posrt
     containerPost.appendChild(datePost);
     containerPost.appendChild(postUser);
     containerPost.appendChild(textPost);
@@ -234,17 +229,14 @@ const userView = {
 
 },
 
-////////////////*******////////****/*/*/*/////// */ */
+/////////Vista de pagina General. Muestra todos los Posts
 
 readGeneral: () => {
   const postGeneral = document.getElementById("tableGeneral");
 
-const db = firebase.firestore()
+  const db = firebase.firestore()
   db.collection("posts").onSnapshot((querySnapshot) => {
 
-   /*const db = firebase.firestore()
-    db.collection("posts").where("email","==", user.email).onSnapshot((querySnapshot) => {
-  */
     postGeneral.innerHTML = "";
     querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data().text}`);
@@ -264,28 +256,14 @@ const db = firebase.firestore()
   datePostGeneral.setAttribute("id", "dateGeneral");
   datePostGeneral.value =  doc.data().date
 
-   
-
-//////////////////////////////////////////////////////
-   
-       //containeredit.appendChild(textedit);
        containerPostGeneral.appendChild(datePostGeneral);
        containerPostGeneral.appendChild(postUserGeneral);
        containerPostGeneral.appendChild(textPostGeneral);
-       tableGeneral.appendChild(containerPost);
+       tableGeneral.appendChild(containerPostGeneral);
 })
 })
 
 }
-
-
-
-
-
-
-
-
-
 
         
 }

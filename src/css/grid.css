@@ -1,8 +1,24 @@
 .content {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100 px 120 px;
-    grid-gap: 10px;
-;
+    /*grid-template-rows:40% 20% 30%;*/
+    grid-template-rows:25% 40% 10% 25%;
+   
+
+}
+
+.buttons {
+    display:grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows:30% 30%;
+    grid-gap:20%;
+
+}
+
+.content-sin {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 30%;
+    grid-gap: 5%;
 
 }

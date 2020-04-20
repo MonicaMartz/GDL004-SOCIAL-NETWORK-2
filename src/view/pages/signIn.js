@@ -1,10 +1,18 @@
 export default () => {
 
     const signIn = `
-    <h1>RED SOCIAL</h1>
-    <h2>Sign In</h2>
+<div class="signin-container">
+    <div class ="content-sin">
+
+        <div class="plantlover">
+            <h2 class="text-logo">Sing In</h2>
+        </div>
+
+        <div class="logo2">
+            <img src="/src/images/logo.png" alt="LogoPlantLover"  width="75" ">
+        </div>
    
-   <form class= "signInForm" id="signInForm">
+        <form class= "signInForm" id="signInForm">
    
         <label for="email-signin">Email:</label>
         <input name="userEmail" type="email" id="emailSignIn" placeholder="Ingresa tu E-mail"/>
@@ -13,11 +21,16 @@ export default () => {
         <input name="userPassword" type="password" id="passwordSignIn" placeholder="Ingresa tu E-mail"/>
 
 
-        <button type="submit" id="getInfo">Sign In</button>
-  </form> `
+        <button type="submit" id="getInfo" class="button-Sign-profile">Sign In</button>
+        </form> 
+    </div>
+</div>
+  `
 
    const divSingIn = document.createElement("div");
     divSingIn.innerHTML = signIn;
 
     return divSingIn;
 }
+
+
