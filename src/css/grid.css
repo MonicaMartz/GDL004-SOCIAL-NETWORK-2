@@ -22,3 +22,16 @@
     grid-gap: 5%;
 
 }
+
+.containerPost-class {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 30% 40% 20%;
+    grid-gap: 2%;
+    
+
+}
+
+.textPost {
+    grid-column: 1 / 3;
+}

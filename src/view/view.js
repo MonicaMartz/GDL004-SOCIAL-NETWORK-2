@@ -94,7 +94,7 @@ const userView = {
       const userProfile = document.getElementById("profileForm");
       const user= firebase.auth().currentUser;
       const tim = new Date();
-      const date = tim.getHours() +":" + (tim.getMinutes()+1) + " Fecha:" + tim.getDate() + "-" + (tim.getMonth()+1) +"-" + tim.getFullYear();
+      const date = tim.getHours() +":" + (tim.getMinutes()+1) + " Date:" + tim.getDate() + "/" + (tim.getMonth()+1) +"/" + tim.getFullYear();
       console.log(userProfile);
 
       userProfile.addEventListener("submit", (e) => {
@@ -142,17 +142,21 @@ const userView = {
 
       const containerPost = document.createElement("div");
         containerPost.setAttribute("id", "containerPost");
+        containerPost.setAttribute("class", "containerPost-class")
 
       const postUser = document.createElement("textarea");
       postUser.setAttribute("id", "postUser");
+      postUser.setAttribute("class", "postUser");
       postUser.value = doc.data().email
 
       const textPost =document.createElement("textarea");
         textPost.setAttribute("id", "textPost");
+        textPost.setAttribute("class", "textPost");
         textPost.value =  doc.data().text
 
       const datePost =document.createElement("textarea");
         datePost.setAttribute("id", "date");
+        datePost.setAttribute("class", "date");
         datePost.value =  doc.data().date
 
         //textPost.setAttribute("placeholder", "Comparte tus ideas");
