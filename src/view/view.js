@@ -118,15 +118,6 @@ const userView = {
           });
         
      },
-/*
-    getPost:(cb)=>{
-      return modelo.observerUser((user) => {
-        return firebase.firestore().collection("post").where( 'userId', '==', user.uid).onSnapshot(cb)
-      })
-      //console.log('****MODELO***********'+' '+user+' '+'**************************'); 
-    },
-*/
-
 
 
     readPost: (user) => {
@@ -161,20 +152,7 @@ const userView = {
         datePost.setAttribute("class", "date");
         datePost.value =  doc.data().date
 
-        //textPost.setAttribute("placeholder", "Comparte tus ideas");
-
-        //PRUEBA DE BOTON EDITAR
-        /*const buttonEdit = document.createElement("button");
-        buttonEdit.innerHTML ="Editar";
-        buttonEdit.dataset.notaID = doc.id
-        buttonEdit.setAttribute("id", "editButton");
-
-        buttonEdit.addEventListener('click', (e) => {
-          console.log(e.target.dataset.notaID);
-
-          
-        })*/
-
+  
 
  //PRUEBA DE BOTON ELIMINAR
 
@@ -216,6 +194,8 @@ const userView = {
 
         .then(function() {
           console.log("Document successfully updated!");
+          userEdit.value ="";
+
            })
         .catch(function(error) {
           console.error("Error updating document: ", error);
