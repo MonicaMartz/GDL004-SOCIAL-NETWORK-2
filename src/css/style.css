@@ -639,26 +639,24 @@ border-radius: 15px;
     margin-bottom: 5px;
    
   }
-/*
   .botones-perfil {
+    width: 500px;
+    height: 80px;
+    margin-bottom: 50px;
+    padding-left: 10%;
     
-  width: 30%;
-  height: 20%;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-left: 60%;
-  font-size: 1.2em;
-  }/*
-
+    }
+  
   .botones-perfil2{
-        
-  font-size: 0.8em;
-  margin-left: 15%;
-  }
-*/
+  
+  font-size: 1em;
+  margin-top: 20px;
+  background: rgb(206, 43, 124);
+  border-radius: 15px;
+    }
   
   .profile-image img {
-    margin-top: 5px;
+    
     margin-bottom: 2px;
     width: 200px;
   }
@@ -779,7 +777,7 @@ margin-left: 25%;
   border:1px solid rgb(38, 212, 53);
   margin-bottom:10px;
   margin-top: 15px;
-  margin-left: 8px;
+  margin-left: 40px;
   padding-left:15px;
   padding-top: 10px;
   height: 120px;
@@ -860,23 +858,57 @@ margin-left: 25%;
   }
 
   .postUserGeneral {
-    font-size: 1em;
-    text-align: center;
-    padding-top: 5px;
+  font-size: 1em;
+  text-align: center;
+  padding-top: 5px;
   }
   
   .dateGeneral{
-    font-size: 1em;
-    text-align: center;
-    padding-top: 10px;
+  font-size: 1em;
+  text-align: center;
+  padding-top: 10px;
   
   }
   .textPostGeneral {
-    font-size: 1em;
-    text-align: center;
-    padding-top: 30px;
+  font-size: 1em;
+  text-align: center;
+  padding-top: 30px;
   
   }
   
 
+}
+
+.noencontrado-container {
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.no-encontrado {
+  width: 50%;
+    height: 40%;
+    margin-top: 25%;
+    margin-left: 25%;
+    background-color: rgb(203, 246, 217);
+    font-size: 0.5em;
+  }
+
+  @media only screen and (min-width: 401px) and (max-width: 960px){
+    .no-encontrado {
+      height: 45%;
+        font-size: 1.4em;
+      }
+  }
+
+
+  @media only screen and (min-width: 961px){
+
+    .no-encontrado {
+      width: 40%;
+        height: 40%;
+        margin-top: 10%;
+        
+        
+      }
 }

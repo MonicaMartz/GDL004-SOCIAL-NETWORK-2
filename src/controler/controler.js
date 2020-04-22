@@ -63,35 +63,22 @@ export const controler = {
                     sectionMain.appendChild(view);
                     userView.initProfile()
                     userView.readPost(user)
-                    userView.signOut ()/* => {
-                        console.log(signOut)
-                        sectionMain.appendChild(components.home());
-                    }*/
+                    userView.signOut ()
 
                 } else {
                    window.location.hash = "#/home"
-                   // sectionMain.appendChild(components.home());
-                }
+                    }
             })
             break
 
            case "#/general":  
            sectionMain.appendChild(components.general());                 
                       userView.readGeneral()
-    
-                   
-
-
-            /*const view = components.profile();
-            sectionMain.appendChild(view);
-            userView.initProfile()
-            userView.readPost()*/
-            //userView. signOutButton()
-            //userView.eventPost()
-           
-            
+             
             break;
         default:
+            sectionMain.appendChild(components.differen());
+            
             
     }
 

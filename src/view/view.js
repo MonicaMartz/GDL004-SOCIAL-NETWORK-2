@@ -2,7 +2,8 @@ import Home from "./pages/home.js";
 import SignUp from "./pages/signup.js";
 import SignIn from "./pages/signin.js";
 import Profile from "./pages/profile.js";
-import General from "./pages/general.js"
+import General from "./pages/general.js";
+import Different from "./pages/404.js";
 import { model } from "../model/model.js";
 import { controler }from "../controler/controler.js";
 import general from "./pages/general.js";
@@ -14,7 +15,8 @@ const components = {
     signup: SignUp,
     signin: SignIn,
     profile: Profile,
-    general: General
+    general: General,
+    differen: Different
 }
 
 //////////Object whith methods
