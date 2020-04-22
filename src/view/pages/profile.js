@@ -58,12 +58,17 @@ const profileUser = `
             <h2>P l a n t  L o v e r</h2>
         </div>
 
+
+        
+        <div class="profile-image">
+        <img src="/src/images/logo.png" alt="LogoPlantLover"  width="75" ">
+        </div>
         <div class ="emailUser">
             <p>${user.email}</p>
         </div>
 
 
-        <div class="botones-perfil"
+        <div class="botones-perfil">
             <button id="profile" class="botones-perfil2"><a href="#/general">General</a></button>
             <button id="closed" class="botones-perfil2">Cerrar Sesión</button>      
         </div>

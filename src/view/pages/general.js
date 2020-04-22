@@ -2,26 +2,23 @@ export default (user) => {
     console.log(user);
 
 const general = `
-    <h1>Red social</h1>
-    <header>
-            <nav>
-                <ul>
-                    <li>
-                        <p><p>
-                    </li>
-                    <li>
-                        <p> Red social</p>
-                    </li>
-                    <li>
-                    <button id="closed">Cerrar Sesión</button>
-                    <button id="profile"><a href="#/profile">Perfil</a></button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+<div class="general-container">
+    <div class ="content-general">
+
+        <div class="titulo-perfil-general">
+            <h2>P l a n t  L o v e r</h2>
+            <button id="profile"><a href="#/profile">Perfil</a></button> 
+        </div>
+        
+        <div class="profile-image">
+        <img src="/src/images/logo.png" alt="LogoPlantLover"  width="75" ">
+        </div>
         
         <div id="tableGeneral">
-        </div>`
+        </div>
+    </div>
+</div>
+        `
         
         const divGeneral = document.createElement("div");
         divGeneral.innerHTML = general;

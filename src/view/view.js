@@ -247,17 +247,21 @@ readGeneral: () => {
 
   const containerPostGeneral = document.createElement("div");
   containerPostGeneral.setAttribute("id", "containerPostGeneral");
+  containerPostGeneral.setAttribute("class", "containerPostGeneral-class");
 
   const postUserGeneral = document.createElement("textarea");
   postUserGeneral.setAttribute("id", "postUserGeneral");
+  postUserGeneral.setAttribute("class", "postUserGeneral");
   postUserGeneral.value = doc.data().email
 
   const textPostGeneral =document.createElement("textarea");
   textPostGeneral.setAttribute("id", "textPostGeneral");
+  textPostGeneral.setAttribute("class", "textPostGeneral");
   textPostGeneral.value =  doc.data().text
 
   const datePostGeneral =document.createElement("textarea");
   datePostGeneral.setAttribute("id", "dateGeneral");
+  datePostGeneral.setAttribute("class", "dateGeneral");
   datePostGeneral.value =  doc.data().date
 
        containerPostGeneral.appendChild(datePostGeneral);
