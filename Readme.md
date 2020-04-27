@@ -1,3 +1,39 @@
+
+# Plant Lovers
+
+Plant Lovers es una red social detinada para personas que gustan por tener pequeños jardines y huertos comparten el gusto por el cuidado de las plantas dentro de casa.
+
+Actualmente existen en facebook grupos de esta tematica, y paginas como ihuerting.com y plantdoctor para el cuidado de las plantas, donde encuentras consejos e ideas, pero en mayor medida publidad de marcas de productores y patrocinadores que acaparan más del 50% del contenido de la aplicación.
+
+El diferenciador de mi producto es que está destinado a crear una comunidad de un gusto en común, donde cada usuario aporte de su experiencia y conocimiento, ideas y creaciones.
+
+
+## Desarrollo de la aplicación
+
+Toda la aplicación está desarrollada en JavaScript Vanilla.
+
+Está diseñada con la arquitectura MVC y es una Single-Page Application.
+
+Para la persistencia de datos usé Firebase gracias a que proporciona herramientas como autentication con la que es posible registrar usuarios, 
+para que una vez identificados puedan ingresar a la aplicación, además de pporporcionar un alojamiento para la base de datos, que pueden ser actualizados en tiempo real.
+Cabe mencionar que la aplicación es responsiva, adaptandose a smartphones, tablets, y monitores de computadoras.
+
+## Uso de la aplicación
+
+* El usuario deberá crear una cuenta en el apartado Sign Up, en donde ingresará nombre, correo electrónico y contraseña.
+
+* Una vez registrado, el usuario podrá acceder a su cuenta en el apartado de Sign In, en donde ingresará su correo electronico y contraseña previamente creada.
+
+* Al ingresar el usuario se mostrará el apartado de perfil, en donde podrá crear los post(en esta versión unicamente son textos, sin limite de palabras)
+
+* Aqui mismo, podrá visualizar dichos post, con hora de creación y nombre de usuario, ademas de tener la opción para editar y eliminar los mismos.
+
+* En el partado de perfil, el usuario podrá visualizar los post propios y de toda la comunidad de usuarios, en donde tambien se mostrará por cada post el nombre de usuario quien lo creó y la hora.
+
+* El usuario podrá cerrar sesión por medio del boton con el mismo nombre en su pagina de perfil.
+
+
+
 # Creando una Red Social
 
 Bienvenida a tu primer proyecto del track de Frontend en Laboratoria.

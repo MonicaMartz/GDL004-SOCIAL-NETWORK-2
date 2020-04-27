@@ -15,7 +15,6 @@ let firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
         controler.changeView(window.location.hash)
         window.addEventListener("hashchange", () => controler.changeView(window.location.hash));
-        //controler.controlerProfile()
         
 }
 

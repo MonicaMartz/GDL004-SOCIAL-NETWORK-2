@@ -6,10 +6,10 @@ import General from "./pages/general.js";
 import Different from "./pages/404.js";
 import { model } from "../model/model.js";
 import { controler }from "../controler/controler.js";
-import general from "./pages/general.js";
 
 
-//////////Creates in an object the elements of the view
+
+//////////Crea en un objeto los elementos de la vista
 const components = {
     home: Home,
     signup: SignUp,
@@ -19,12 +19,12 @@ const components = {
     differen: Different
 }
 
-//////////Object whith methods
+//////////Objeto con métodos
 const userView = {
 
    
 //////////Sign Up 
-      //obtiene el formSignUp de html y captura los valores ingresados nombre, correo y contraseña
+        //obtiene el formSignUp de html y captura los valores ingresados nombre, correo y contraseña
     initSignUp: () => {
         const userNewData = document.getElementById("signUpForm");
         console.log(userNewData);
@@ -51,6 +51,7 @@ const userView = {
 
 
 //////////Sign In
+        //obtiene el formSignIn de html y captura los valores ingresados correo y contraseña
     initSignIn: () => {
         const userSignIn = document.getElementById("signInForm");
         console.log(userSignIn);
@@ -67,8 +68,7 @@ const userView = {
             .catch(function(error) {
                 let errorCode = error.code;
                 let errorMessage = error.message;
-                //let errorMessage = "Verifica tus datos";
-                            
+                                            
                 alert(errorMessage);
               });
           
@@ -76,9 +76,6 @@ const userView = {
       },
 
     ////////////Sign Out
-
-
-
     signOut: () => {
       const buttonSignOut = document.getElementById("closed");
       //const userSignOut = profileUser.querySelector('closeSesion');
@@ -90,13 +87,13 @@ const userView = {
     },
 
 
-
-    //////////Create post in real time REATE POST IN REAL TIME
+    //////////Crea post en tiempo real
     initProfile: () => {
       const userProfile = document.getElementById("profileForm");
       const user= firebase.auth().currentUser;
       const tim = new Date();
       const date = tim.getHours() +":" + (tim.getMinutes()+1) + " Date:" + tim.getDate() + "/" + (tim.getMonth()+1) +"/" + tim.getFullYear();
+     //interpolacion de variable y template literal
       console.log(userProfile);
 
       userProfile.addEventListener("submit", (e) => {
@@ -123,9 +120,7 @@ const userView = {
     readPost: (user) => {
       const postRead = document.getElementById("table");
   
-    /* const db = firebase.firestore()
-      db.collection("posts").onSnapshot((querySnapshot) => {*/
-
+    
        const db = firebase.firestore()
         db.collection("posts").where("email","==", user.email).onSnapshot((querySnapshot) => {
       
@@ -138,9 +133,9 @@ const userView = {
         containerPost.setAttribute("class", "containerPost-class")
 
       const postUser = document.createElement("textarea");
-      postUser.setAttribute("id", "postUser");
-      postUser.setAttribute("class", "postUser");
-      postUser.value = doc.data().email
+        postUser.setAttribute("id", "postUser");
+        postUser.setAttribute("class", "postUser");
+        postUser.value = doc.data().email
 
       const textPost =document.createElement("textarea");
         textPost.setAttribute("id", "textPost");
@@ -151,10 +146,9 @@ const userView = {
         datePost.setAttribute("id", "date");
         datePost.setAttribute("class", "date");
         datePost.value =  doc.data().date
+       
 
-  
-
- //PRUEBA DE BOTON ELIMINAR
+//////////Botón Eliminar
 
       const buttonDelete = document.createElement("button");
         buttonDelete.innerHTML ="Eliminar";
@@ -203,7 +197,7 @@ const userView = {
          });
       }
   
-/// Contenedor de Posrt
+/////Contenedor de Post
     containerPost.appendChild(datePost);
     containerPost.appendChild(postUser);
     containerPost.appendChild(textPost);

@@ -23,10 +23,6 @@ h5 {
     font-family: 'Arbutus Slab', serif;
     font-size: 0.8em;
 }
-/*font-family: 'Arbutus Slab', serif;
-font-family: 'Lobster Two', cursive;
-font-family: 'Muli', sans-serif;*/
-
 
   /*//////////HOME*/
   
@@ -48,7 +44,6 @@ font-family: 'Muli', sans-serif;*/
   }
 
   .plantlover {
-    /*background-color: indianred;*/
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -62,19 +57,18 @@ font-family: 'Muli', sans-serif;*/
   }
 
   .logo img{
-    width: 100%;
+    width: 85%;
   }
 
   .slogan {
     padding-top: 10%;
     padding-bottom: 2%;
   }
+
   .welcome {
-    /*background-color: rgb(89, 172, 7);*/
     padding-top: 2%;
     padding-bottom: 5%;
     text-align: center;
-   
   }
 
   .buttons {
@@ -115,8 +109,13 @@ font-family: 'Muli', sans-serif;*/
   /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px){
   
+  .logo {
+    margin-top: px;
+  }
+
   .logo img{
-    width: 80%;
+    width: 70%;
+    padding-top: 5px;
   }
 
   h2 {
@@ -149,8 +148,7 @@ font-family: 'Muli', sans-serif;*/
   }
   .slogan {
     padding-top: 1%;
-    padding-bottom: 0%;
-    
+    padding-bottom: 0%;    
   }
 
   h2 {
@@ -174,11 +172,11 @@ font-family: 'Muli', sans-serif;*/
   }
 
   .welcome {
-    /*background-color: rgb(89, 172, 7);*/
     padding-top: 2%;
     padding-bottom: 10%;
     text-align: center;
   }
+
   .button-Sign {
     width: 35%;
     height: 140%;;
@@ -256,6 +254,7 @@ input {
     padding-left: 30%;
     padding-right: 30%;
   }
+
   .button-Sign-profile {
     width: 60%;
     height: 60%;
@@ -279,14 +278,12 @@ input {
     font-size: 3em;
   }
   
-  
   .logo2 img{
     width: 20%;
   }
 
   .text-logo {
     padding-top: 2%;
-
   }
 
   .button-Sign-profile {
@@ -302,10 +299,10 @@ input {
 /*//////Sign up profile*/
 .signup-container {
   width: 100vw;
-    height: 100vh;
-    background-image: url("../images/fondo5.jpg");
-    position: absolute;
-    background-size:auto;
+  height: 100vh;
+  background-image: url("../images/fondo5.jpg");
+  position: absolute;
+  background-size:auto;
 
 }
 
@@ -321,23 +318,22 @@ input {
 
 .signUpForm {
   padding-top: 10%;
-    text-align: center;
-    font-family: 'Arbutus Slab', serif;
+  text-align: center;
+  font-family: 'Arbutus Slab', serif;
   }
 
 input {
   font-family: 'Muli', sans-serif
-  
   }
 
   .button-Signup-profile {
-    margin-top: 5%;
-    width: 60%;
-    height: 40%;
-    background: #10c325;
-    border-radius: 30%;
-    font-family: 'Arbutus Slab', serif;
-  }
+   margin-top: 5%;
+   width: 60%;
+   height: 40%;
+   background: #10c325;
+   border-radius: 30%;
+   font-family: 'Arbutus Slab', serif;
+ }
 
   @media only screen and (min-width: 401px) and (max-width: 960px){
 
@@ -384,10 +380,10 @@ input {
 
   /*////pagina de perfil*/
 
- .profile-container {
-width: 100vw;
-background-color: rgb(241, 207, 224);
-  }
+.profile-container {
+  width: 100vw;
+  background-color: rgb(241, 207, 224);
+}
     
 .content-user {
   width: 90%;
@@ -397,7 +393,7 @@ background-color: rgb(241, 207, 224);
   background-color: rgb(236, 226, 231);
 }
 
-  .titulo-perfil {
+.titulo-perfil {
   width: 100%;
   height: 1%;
   background-image: url("../images/fondo5.jpg");
@@ -405,23 +401,22 @@ background-color: rgb(241, 207, 224);
   text-align: center;
   }
 
-  .profile-image {
-    text-align: center;
-    margin-top: 2px;
+.profile-image {
+  text-align: center;
+  margin-top: 2px;
   }
 
-  .profile-image img {
-    margin-bottom: 2px
+.profile-image img {
+  margin-bottom: 2px
   }
 
-  p {
-    text-align: center;
-    padding-top: 5px;
-    font-family: 'Arbutus Slab', serif;
-   
+p {
+  text-align: center;
+  padding-top: 5px;
+  font-family: 'Arbutus Slab', serif;
   }
 
-  .botones-perfil {
+.botones-perfil {
   width: 350px;
   height: 50px;
   margin-bottom: 50px;
@@ -430,26 +425,25 @@ background-color: rgb(241, 207, 224);
   }
 
 .botones-perfil2{
-font-family: 'Arbutus Slab', serif;
-width: 150px;
-height: 40px;
-font-size: 1em;
-margin-top: 35px;
-background: rgb(206, 43, 124);
-border-radius: 15px;
+  font-family: 'Arbutus Slab', serif;
+  width: 150px;
+  height: 40px;
+  font-size: 1em;
+  margin-top: 35px;
+  background: rgb(206, 43, 124);
+  border-radius: 15px;
   }
   
 .profileForm{
   background-color: rgb(181, 241, 193);
   border: 3px solid rgb(38, 212, 53);
-        width: 80%;
-        height: 150px;
-        margin-bottom: 5%;
-        margin-left: 10%;
-        text-align: center;
-        font-family: 'Arbutus Slab', serif;
-        font-size: 2em;
-
+  width: 80%;
+  height: 150px;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  text-align: center;
+  font-family: 'Arbutus Slab', serif;
+  font-size: 2em;
 }
 
 #send{
@@ -460,7 +454,6 @@ border-radius: 15px;
   height: 30px;
   background: rgb(206, 43, 124);
   border-radius: 15px;
-
 }
 
 .espacio-editar {
@@ -541,40 +534,32 @@ border-radius: 15px;
 
 @media only screen and (min-width: 401px) and (max-width: 960px){
   p {
-    font-size: 1.5em;
-   
+    font-size: 1.5em; 
   }
   
-  
-
   .profile-image img {
     margin-top: 5px;
     margin-bottom: 2px;
     width: 200px;
   }
 
-  .profileForm{
-   
+  .profileForm{ 
     width: 80%;
     height: 100px;
     margin-bottom: 20px;
     margin-left: 10%;
     font-size: 2.2em;
-    
     }
 
   #send{
     width: 120px; 
     height: 35px;
     font-size: 0.5em;
-    
   }
 
   .espacio-editar {
-   
     width: 80%;
     height: 100px;
-    
   }
 
   #cambios{
@@ -583,10 +568,7 @@ border-radius: 15px;
     font-size: 1.1em;
   }
 
-  
-
-  .containerPost-class{
-    
+  .containerPost-class{ 
     height: 200px;
     width: 90;
   }
@@ -594,17 +576,15 @@ border-radius: 15px;
   .postUser{
     font-size: 1.5em;
     text-align: center;
-    
-  
   }
+
   .textPost{
-    font-size: 1.8em;
-   
+    font-size: 1.8em; 
     text-align: center;
     padding-bottom: 1px;
     padding-top: 5px;
-    
   }
+
   .date{
     font-size: 1.2em;
     text-align: center;
@@ -615,7 +595,7 @@ border-radius: 15px;
     width: 120px;
     height: 35px;
     font-size: 1.2em;
-  border-radius: 15px
+    border-radius: 15px
     }
   
   #editButton {
@@ -625,73 +605,62 @@ border-radius: 15px;
     border-radius: 15px
   }
 
-
-
-
-
 }
 
 @media only screen and (min-width: 961px){
 
   p {
-  
     padding-top: 2%;
     margin-bottom: 5px;
-   
   }
+
   .botones-perfil {
     width: 500px;
     height: 80px;
     margin-bottom: 50px;
-    padding-left: 10%;
-    
+    padding-left: 10%;  
     }
   
-  .botones-perfil2{
-  
-  font-size: 1em;
-  margin-top: 20px;
-  background: rgb(206, 43, 124);
-  border-radius: 15px;
+  .botones-perfil2 {
+    font-size: 1em;
+    margin-top: 20px;
+    background: rgb(206, 43, 124);
+    border-radius: 15px;
     }
   
   .profile-image img {
-    
     margin-bottom: 2px;
     width: 200px;
   }
 
 .profileForm {
-
-width: 600px;
-height: 100px;
-margin-bottom: 3%;
-margin-left: 25%;
+    width: 600px;
+    height: 100px;
+    margin-bottom: 3%;
+    margin-left: 25%;
 }
 
  #send {
- width: 100px;
- border-radius: 15px;
- height: 40px;
-        
+    width: 100px;
+    border-radius: 15px;
+    height: 40px;
   }
 
  .espacio-editar {
-  width: 600px;
-  height: 50px;
-  padding-top: 5px;
-  padding-bottom: 30px;
-  margin-left: 25%;
-  margin-bottom: 25px;
-
+    width: 600px;
+    height: 50px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    margin-left: 25%;
+    margin-bottom: 25px;
    }
     
    #cambios{
     width: 100px;
     height: 35px;
     border-radius: 15px;
-  
   }
+
   .containerPost-class{
     margin-bottom: 15px;
     margin-top: 5px;
@@ -699,42 +668,35 @@ margin-left: 25%;
     padding-left: 2%;
     padding-top: 8px;
     height: 120px;
-    width: 850px;
-
-    
+    width: 850px;    
   }
+
   .postUser{
-    font-size: 1em;
-    
+    font-size: 1em;  
     padding-top: 2%;
   }
-    .textPost{
-      font-size: 1em;
-      
-      padding-top: 2%;
-    
+
+  .textPost{
+    font-size: 1em;
+    padding-top: 2%;
+  }
+
+  .date{
+    font-size: 1em;
+    padding-top: 2%;    
     }
-    .date{
-      font-size: 1em;
-      padding-top: 2%;
-     
-    
-    }
-    #deleteButton {
-      width: 100px;
-      height: 28px;
-      
+
+  #deleteButton {
+    width: 100px;
+    height: 28px;  
     border-radius: 15px
-      }
+   }
     
-    #editButton {
-      width: 80px;
-      height: 28px;
-      
-      border-radius: 15px
+  #editButton {
+    width: 80px;
+    height: 28px;
+    border-radius: 15px
     }
-
-
    }
 
    /*//////Pagina general*/
@@ -745,23 +707,22 @@ margin-left: 25%;
 
 .content-general {
   width: 90%;
-    height: 95%;
-    margin-left: 5%;
-    padding-top: 5%;
-    background-color: rgb(113, 218, 181);
+  height: 95%;
+  margin-left: 5%;
+  padding-top: 5%;
+  background-color: rgb(113, 218, 181);
 }
 
 .titulo-perfil-general {
   width: 100%;
   height: 55px;
-    background-image: url("../images/fondo5.jpg");
-    color: white;
-    text-align: center;
+  background-image: url("../images/fondo5.jpg");
+  color: white;
+  text-align: center;
 }
 
 .tableGeneral {
   width: 100%;
-  
 }
 
 #profile {
@@ -810,11 +771,10 @@ margin-left: 25%;
   .titulo-perfil-general {
     width: 100%;
     height: 90px;
-     
   }
+
   #profile {
-    margin-right: 5%;
-   
+    margin-right: 5%; 
   }
 
   .postUserGeneral {
@@ -839,7 +799,6 @@ margin-left: 25%;
   .titulo-perfil-general {
     width: 100%;
     height: 70px;
-    
   }
 
   #profile {
@@ -858,25 +817,23 @@ margin-left: 25%;
   }
 
   .postUserGeneral {
-  font-size: 1em;
-  text-align: center;
-  padding-top: 5px;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 5px;
   }
   
   .dateGeneral{
-  font-size: 1em;
-  text-align: center;
-  padding-top: 10px;
-  
-  }
-  .textPostGeneral {
-  font-size: 1em;
-  text-align: center;
-  padding-top: 30px;
-  
-  }
-  
+    font-size: 1em;
+    text-align: center;
+    padding-top: 10px;
+    }
 
+  .textPostGeneral {
+    font-size: 1em;
+    text-align: center;
+    padding-top: 30px;
+  }
+  
 }
 
 .noencontrado-container {
@@ -887,17 +844,17 @@ margin-left: 25%;
 
 .no-encontrado {
   width: 50%;
-    height: 40%;
-    margin-top: 25%;
-    margin-left: 25%;
-    background-color: rgb(203, 246, 217);
-    font-size: 0.5em;
+  height: 40%;
+  margin-top: 25%;
+  margin-left: 25%;
+  background-color: rgb(203, 246, 217);
+  font-size: 0.5em;
   }
 
   @media only screen and (min-width: 401px) and (max-width: 960px){
     .no-encontrado {
       height: 45%;
-        font-size: 1.4em;
+      font-size: 1.4em;
       }
   }
 
@@ -906,8 +863,8 @@ margin-left: 25%;
 
     .no-encontrado {
       width: 40%;
-        height: 40%;
-        margin-top: 10%;
+      height: 40%;
+      margin-top: 10%;
         
         
       }

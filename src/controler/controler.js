@@ -9,6 +9,9 @@ export const controler = {
     newUser:(newUserSignUp) => {
        return model.signUpUser(newUserSignUp)
     },
+//posibilidad de hacerlo en una linea. llaves
+//neuUser:newUserSignUp => model.signUpUser(newUserSignUp),
+
 
     accesUser:(newUserSignIn) => {
        return  model.signInUser(newUserSignIn)
