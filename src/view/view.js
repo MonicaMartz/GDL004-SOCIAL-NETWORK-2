@@ -1,6 +1,6 @@
 import Home from "./pages/home.js";
 import SignUp from "./pages/signup.js";
-//import SignIn from "./pages/signin.js";
+import SignIn from "./pages/signin.js";
 import Profile from "./pages/profile.js";
 import General from "./pages/general.js";
 import Different from "./pages/404.js";
