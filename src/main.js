@@ -1,7 +1,7 @@
 import { controler } from "./controler/controler.js";
 
 const init = () => {
-        console.log("Hola mundo");
+       alert("Hola mundo");
 let firebaseConfig = {
         apiKey: "AIzaSyCMSU1YmFf97sfsOJgTkF9DvSC18sVoYQQ",
         authDomain: "redsocial-ecb03.firebaseapp.com",
