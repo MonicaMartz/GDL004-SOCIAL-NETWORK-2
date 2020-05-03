@@ -27,7 +27,7 @@ const userView = {
         //obtiene el formSignUp de html y captura los valores ingresados nombre, correo y contraseña
     initSignUp: () => {
         const userNewData = document.getElementById("signUpForm");
-        console.log(userNewData);
+        //console.log(userNewData);
        
         userNewData.addEventListener("submit", (e) => {
             e.preventDefault(); 
@@ -36,7 +36,7 @@ const userView = {
               email: userNewData.emailSignUp.value,
               pass: userNewData.passwordSignUp.value
             }
-            console.log(newUserSignUp);
+           // console.log(newUserSignUp);
             userNewData.reset();
             controler.newUser(newUserSignUp)
             .catch(function(error) {
@@ -54,7 +54,7 @@ const userView = {
         //obtiene el formSignIn de html y captura los valores ingresados correo y contraseña
     initSignIn: () => {
         const userSignIn = document.getElementById("signInForm");
-        console.log(userSignIn);
+        //console.log(userSignIn);
 
         userSignIn.addEventListener("submit", (e) => {
             e.preventDefault(); 
@@ -62,7 +62,7 @@ const userView = {
               email: userSignIn.emailSignIn.value,
               pass: userSignIn.passwordSignIn.value
             }
-            console.log(newUserSignIn);
+            //console.log(newUserSignIn);
             userSignIn.reset();
             controler.accesUser(newUserSignIn)
             .catch(function(error) {
@@ -79,7 +79,7 @@ const userView = {
     signOut: () => {
       const buttonSignOut = document.getElementById("closed");
       //const userSignOut = profileUser.querySelector('closeSesion');
-      console.log(buttonSignOut);
+     // console.log(buttonSignOut);
       buttonSignOut.addEventListener('click', (e) => {
         model.signOutUser()
       })
@@ -94,7 +94,7 @@ const userView = {
       const tim = new Date();
       const date = tim.getHours() +":" + (tim.getMinutes()+1) + " Date:" + tim.getDate() + "/" + (tim.getMonth()+1) +"/" + tim.getFullYear();
      //interpolacion de variable y template literal
-      console.log(userProfile);
+      //console.log(userProfile);
 
       userProfile.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -126,7 +126,7 @@ const userView = {
       
         postRead.innerHTML = "";
         querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data().text}`);
+        //console.log(`${doc.id} => ${doc.data().text}`);
 
       const containerPost = document.createElement("div");
         containerPost.setAttribute("id", "containerPost");
@@ -157,7 +157,7 @@ const userView = {
 
         buttonDelete.addEventListener('click', (e) => {
           controler.deletePost(doc.id)
-          console.log(e.target.dataset.notaID);
+          //console.log(e.target.dataset.notaID);
         })
 
 //////////Botón editar
@@ -167,7 +167,7 @@ const userView = {
         buttonEdit.setAttribute("id", "editButton");
 
         buttonEdit.addEventListener('click', (e) => {
-          console.log(e.target.dataset.notaID);
+          //console.log(e.target.dataset.notaID);
           document.getElementById("edittx").value = `${doc.data().text}`
           editText(doc.id)
         })
@@ -178,7 +178,7 @@ const userView = {
           const bottonchange = document.getElementById("cambios");
             bottonchange.innerHTML ="Enviar";
             bottonchange.addEventListener('click', (e) => {
-            console.log(e.target.dataset.notaID);
+            //console.log(e.target.dataset.notaID);
 
           const db = firebase.firestore()
           const editps = db.collection("posts").doc(id);
@@ -219,7 +219,7 @@ readGeneral: () => {
 
     postGeneral.innerHTML = "";
     querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data().text}`);
+    //console.log(`${doc.id} => ${doc.data().text}`);
 
   const containerPostGeneral = document.createElement("div");
   containerPostGeneral.setAttribute("id", "containerPostGeneral");

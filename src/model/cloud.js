@@ -11,7 +11,7 @@ export const cloud ={
    delete: (id) => {
     const db = firebase.firestore()
     return db.collection("posts").doc(id).delete().then(function() {
-    console.log("Document successfully deleted!");
+    //console.log("Document successfully deleted!");
 });
    },
     

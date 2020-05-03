@@ -9,7 +9,7 @@ export default () => {
         </div>
 
         <div class="logo2">
-            <img src="/src/images/logo.png" alt="LogoPlantLover"  width="75" ">
+            <img src="../images/logo.png" alt="LogoPlantLover"  width="75" ">
         </div>
    
         <form class= "signInForm" id="signInForm">

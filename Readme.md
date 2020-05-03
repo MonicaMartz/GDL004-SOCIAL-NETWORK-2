@@ -1,6 +1,8 @@
 
 # Plant Lovers
 
+https://monicamartz.github.io/GDL004-SOCIAL-NETWORK-2/src/
+
 Plant Lovers es una red social detinada para personas que gustan por tener pequeños jardines y huertos comparten el gusto por el cuidado de las plantas dentro de casa.
 
 Actualmente existen en facebook grupos de esta tematica, y paginas como ihuerting.com y plantdoctor para el cuidado de las plantas, donde encuentras consejos e ideas, pero en mayor medida publidad de marcas de productores y patrocinadores que acaparan más del 50% del contenido de la aplicación.
@@ -22,17 +24,27 @@ Cabe mencionar que la aplicación es responsiva, adaptandose a smartphones, tabl
 
 * El usuario deberá crear una cuenta en el apartado Sign Up, en donde ingresará nombre, correo electrónico y contraseña.
 
+![vista1](https://i.pinimg.com/originals/23/aa/34/23aa348ea2c69d5606f6bcd775050311.png)
+
 * Una vez registrado, el usuario podrá acceder a su cuenta en el apartado de Sign In, en donde ingresará su correo electronico y contraseña previamente creada.
 
+![vista2](https://i.pinimg.com/originals/ed/24/61/ed24617cfca2072a073adbd5f21e4543.png)
+
 * Al ingresar el usuario se mostrará el apartado de perfil, en donde podrá crear los post(en esta versión unicamente son textos, sin limite de palabras)
+
+![vista3](https://i.pinimg.com/originals/a3/c1/c9/a3c1c955bb2e21e1a1637a7214bb8f9f.png)
 
 * Aqui mismo, podrá visualizar dichos post, con hora de creación y nombre de usuario, ademas de tener la opción para editar y eliminar los mismos.
 
 * En el partado de perfil, el usuario podrá visualizar los post propios y de toda la comunidad de usuarios, en donde tambien se mostrará por cada post el nombre de usuario quien lo creó y la hora.
 
+![vista4](https://i.pinimg.com/originals/a0/b2/74/a0b2747cfcecc1dfc17ba3b7d9354760.png)
+
 * El usuario podrá cerrar sesión por medio del boton con el mismo nombre en su pagina de perfil.
 
 
+***
+***
 
 # Creando una Red Social
 

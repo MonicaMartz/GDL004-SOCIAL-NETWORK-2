@@ -37,7 +37,7 @@ export const controler = {
 
     
     changeView: (hash) => {
-    console.log(hash)
+    //console.log(hash)
 
     const sectionMain = document.getElementById("container");
     sectionMain.innerHTML =" ";

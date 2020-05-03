@@ -1,5 +1,5 @@
 export default (user) => {
-    console.log(user);
+    //console.log(user);
 
 const general = `
 <div class="general-container">
